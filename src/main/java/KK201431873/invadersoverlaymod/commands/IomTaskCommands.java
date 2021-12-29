@@ -1,7 +1,6 @@
 package KK201431873.invadersoverlaymod.commands;
 
 import KK201431873.invadersoverlaymod.hud.mod.HudManager;
-import KK201431873.invadersoverlaymod.hud.mod.HudMod;
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;

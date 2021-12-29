@@ -1,7 +1,5 @@
 package KK201431873.invadersoverlaymod.hud;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
 import org.lwjgl.input.Mouse;
 
 public class DraggableComponent {

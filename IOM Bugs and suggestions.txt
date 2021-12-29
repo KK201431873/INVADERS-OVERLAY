@@ -1,0 +1,10 @@
+- messes up your hearts and hunger bar
+- check chat messages to keep track of team resources
+- a way to remove the "New task" AKA name display
+- a way to remove the background AKA bordered box
+- make the itemcounts sense which side of the screen it's on and make the gui expand the opposite way so it doesnt go off the screen
+- task saving system when you log off
+- Invisible background
+- Update the counter only when items are added via looking at the chat
+- Remove "New Task"
+- Make the gui stay in its place on the game restarting (txt file system or something)

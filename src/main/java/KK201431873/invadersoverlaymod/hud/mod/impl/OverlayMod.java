@@ -4,11 +4,12 @@ import KK201431873.invadersoverlaymod.hud.mod.HudMod;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 
 import java.awt.*;
-import java.util.Arrays;
 
 public class OverlayMod extends HudMod {
 

@@ -14,9 +14,8 @@ public class Checker {
     public void checkUpdate(){
         try {
             System.out.println("Starting update checker process.");
-            //TODO: Change the url to https://raw.githubusercontent.com/KK201431873/INVADERS-OVERLAY/ressources/version.txt
-            // or the equivalent of the raw version.txt
-            URL url = new URL("https://raw.githubusercontent.com/portalthree/Botcraft/master/CMakeLists.txt");
+            //TODO: Change it to KK201431873/INVADERS-OVERLAY when pushing the changes to the repo
+            URL url = new URL("https://raw.githubusercontent.com/portalthree/INVADERS-OVERLAY/main/src/main/resources/version.txt");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
             con.setRequestMethod("GET");

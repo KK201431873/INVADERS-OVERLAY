@@ -4,6 +4,7 @@ import KK201431873.invadersoverlaymod.commands.IomShortenedTaskCommands;
 import KK201431873.invadersoverlaymod.commands.IomTaskCommands;
 import KK201431873.invadersoverlaymod.commands.IomTaskConfigCommands;
 import KK201431873.invadersoverlaymod.hud.mod.HudManager;
+import KK201431873.invadersoverlaymod.updater.Checker;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,15 +32,12 @@ public class InvadersOverlayMod
     public HudManager hudManager;
 
     @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
-
+    public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit(event);
     }
 
     @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
+    public void init(FMLInitializationEvent event) {
         proxy.init(event);
         KeybindsInit.register(event);
         ClientCommandHandler.instance.registerCommand(new IomTaskConfigCommands());
@@ -48,10 +46,11 @@ public class InvadersOverlayMod
     }
 
     @EventHandler
-    public void postInit(FMLPostInitializationEvent event)
-    {
+    public void postInit(FMLPostInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new IOMEventHandler());
         hudManager = new HudManager();
         proxy.postInit(event);
+        Checker updater = new Checker();
+        updater.checkUpdate();
     }
 }

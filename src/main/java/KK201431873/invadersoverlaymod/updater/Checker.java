@@ -21,18 +21,13 @@ public class Checker {
             con.setRequestMethod("GET");
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
-            /*
-            * IntelliJ will ask to use StringBuilder instead of StringBuffer
-            * but StringBuffer is the correct solution, StringBuffer will not be able to
-            * make sure InvadersOverlayMod.VERSION and mostUpToDateVersion are
-            * not equal
-             */
-            StringBuffer content = new StringBuffer();
+
+            StringBuilder content = new StringBuilder();
             while ((inputLine = in.readLine()) != null) {
                 content.append(inputLine);
             }
             mostUpToDateVersion = content.toString();
-            System.out.println("MOST UP TO DATE VERSION: " + mostUpToDateVersion);
+            System.out.println("MOST UP TO DATE VERSION:" + mostUpToDateVersion);
 
             if(!InvadersOverlayMod.VERSION.equals(mostUpToDateVersion)){
                 System.out.println("Found update! You are running " + InvadersOverlayMod.VERSION);

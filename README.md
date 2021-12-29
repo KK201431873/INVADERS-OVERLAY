@@ -5,7 +5,8 @@ Minecraft Version: Forge 1.8.9
 12/28/21
 
 Invaders Overlay Mod (IOM) is an overlay mod for Hypixel Invaders (mc.hypixel.net).
-Created by KK201431873
+
+Created by KK201431873 & portalthree
 
 ## DOCUMENTATION
 
@@ -22,19 +23,19 @@ Tasks can be configured by using the IOM commands. Execute "/iom help" in the ga
 - /iom setall <amount1> <amount2> <amount3> <amount4> <amount5> <amount6> <amount7> <amount8> <amount9> <amount10> <amount11> <amount12>
  - Changes the resource goal of each item to their respective positions in the command.
 
-The order is as follows:
-- shiny_bar
-- super_ultra_sticky_glue
-- support_rod
-- space_sand
-- sharpened_stone
-- synthetic_thread
-- slime_poop
-- unidentified_material
-- bonding_agent
-- super_shiny_rock
-- silicon
-- gyroscope
+The setall order is as follows:
+1 - shiny_bar
+2 - super_ultra_sticky_glue
+3 - support_rod
+4 - space_sand
+5 - sharpened_stone
+6 - synthetic_thread
+7 - slime_poop
+8 - unidentified_material
+9 - bonding_agent
+10 - super_shiny_rock
+11 - silicon
+12 - gyroscope
 
 Tasks can be created, edited, and viewed by using the Task commands. Execute "/task help" in the game for a detailed list.
 NOTE: The "/task" prefix of the command can be shortened and replaced with "/t".
@@ -56,9 +57,9 @@ Task switching (Changing to a different saved task configuration)
 **Indexes of tasks begin at index 1
 
 Shorthand Substitutions
-- delete		 = del
-- deleteind	 = delind
-- setname		 = sn
-- cycle		 = c
-- forward		 = f
-- backward	 = b
+- delete:del
+- deleteind:delind
+- setname:sn
+- cycle:c
+- forward:f
+- backward:b

@@ -1,17 +1,17 @@
 package KK201431873.invadersoverlaymod.updater;
 
 import KK201431873.invadersoverlaymod.InvadersOverlayMod;
-import org.lwjgl.Sys;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
 
 public class Checker {
-    public void checkUpdate(){
+    String mostUpToDateVersion;
+    public void checkUpdate(FMLPostInitializationEvent event){
         try {
             System.out.println("Starting update checker process.");
             //TODO: Change it to KK201431873/INVADERS-OVERLAY when pushing the changes to the repo
@@ -21,18 +21,26 @@ public class Checker {
             con.setRequestMethod("GET");
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
-            StringBuilder content = new StringBuilder();
+            /*
+            * IntelliJ will ask to use StringBuilder instead of StringBuffer
+            * but StringBuffer is the correct solution, StringBuffer will not be able to
+            * make sure InvadersOverlayMod.VERSION and mostUpToDateVersion are
+            * not equal
+             */
+            StringBuffer content = new StringBuffer();
             while ((inputLine = in.readLine()) != null) {
                 content.append(inputLine);
             }
-            System.out.println("MOST UP TO DATE VERSION: " + content);
+            mostUpToDateVersion = content.toString();
+            System.out.println("MOST UP TO DATE VERSION: " + mostUpToDateVersion);
 
-            if(!InvadersOverlayMod.MODID.equals(content.toString())){
+            if(!InvadersOverlayMod.VERSION.equals(mostUpToDateVersion)){
                 System.out.println("Found update! You are running " + InvadersOverlayMod.VERSION);
                 System.out.println("Please update to " + content + " at https://github.com/KK201431873/INVADERS-OVERLAY");
                 System.out.println("Sending message to the player when they join a world.");
 
-                //TODO: Send a message to the player to notify them to update.
+                MinecraftForge.EVENT_BUS.register(new SendMessageOnWorldJoin(mostUpToDateVersion));
+
             } else {
                 System.out.println("You are up to date!");
             }

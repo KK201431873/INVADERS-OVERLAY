@@ -12,34 +12,60 @@ import net.minecraft.util.EnumChatFormatting;
 import java.awt.*;
 
 public class OverlayMod extends HudMod {
-
     public OverlayMod(String cname, int cx, int cy) {
         super(cname, cx, cy);
     }
 
     public final int RESOURCECT = 12;
-    //---------------------------------------------------------------------------------------------------------------------------------------
-    //ORDER: 1..shiny bar; 2..super ultra sticky glue; 3..support rod; 4..space sand; 5..sharpened stone; 6..synthetic thread; 7..slime poop;
-    //8..unidentified material; 9..bonding agent; 10..super shiny rock; 11..silicon; 12..gyroscope
-    //---------------------------------------------------------------------------------------------------------------------------------------
 
-    ItemStack shiny_bar = new ItemStack(Items.gold_ingot), super_ultra_sticky_glue = new ItemStack(Items.clay_ball),
-            support_rod = new ItemStack(Items.stick), space_sand = new ItemStack(ItemBlock.getItemFromBlock(Blocks.sand)),
-            sharp_stone = new ItemStack(Items.flint), synthetic_thread = new ItemStack(Items.string),
-            slime_poop = new ItemStack(Items.slime_ball), unidentified_material = new ItemStack(Items.iron_ingot),
-            bonding_agent = new ItemStack(Items.redstone), super_shiny_rock = new ItemStack(Items.diamond),
-            silicon = new ItemStack(Items.sugar), gyroscope = new ItemStack(Items.firework_charge);
+    /*
+     ORDER: 1.shiny bar;
+     2.super ultra sticky glue
+     3.support rod
+     4.space sand
+     5.sharpened stone
+     6.synthetic thread
+     7.slime poop
+     8.unidentified material
+     9.bonding agent
+     10.super shiny rock
+     11.silicon
+     12.gyroscope
+     */
 
-    ItemStack[] itemstx = {shiny_bar, super_ultra_sticky_glue, support_rod, space_sand,
-            sharp_stone, synthetic_thread, slime_poop, unidentified_material,
-            bonding_agent, super_shiny_rock, silicon, gyroscope};
+    ItemStack shiny_bar = new ItemStack(Items.gold_ingot),
+              super_ultra_sticky_glue = new ItemStack(Items.clay_ball),
+              support_rod = new ItemStack(Items.stick),
+              space_sand = new ItemStack(ItemBlock.getItemFromBlock(Blocks.sand)),
+              sharp_stone = new ItemStack(Items.flint),
+              synthetic_thread = new ItemStack(Items.string),
+              slime_poop = new ItemStack(Items.slime_ball),
+              unidentified_material = new ItemStack(Items.iron_ingot),
+              bonding_agent = new ItemStack(Items.redstone),
+              super_shiny_rock = new ItemStack(Items.diamond),
+              silicon = new ItemStack(Items.sugar),
+              gyroscope = new ItemStack(Items.firework_charge);
+
+    ItemStack[] itemstx = {
+            shiny_bar,
+            super_ultra_sticky_glue,
+            support_rod,
+            space_sand,
+            sharp_stone,
+            synthetic_thread,
+            slime_poop,
+            unidentified_material,
+            bonding_agent,
+            super_shiny_rock,
+            silicon,
+            gyroscope
+    };
 
     int[] itemcounts = new int[RESOURCECT];
 
     private int[] maxlen = new int[4];
 
-    public void draw()
-    {
+    public void draw() {
         RenderHelper.enableGUIStandardItemLighting();
         int transpColor = new Color(0, 0, 0, 26).getRGB(), startX = getX()-60, startY = getY()-(itemstx.length*5)-5, endX = getX()+(maxlen[0]+maxlen[1]+maxlen[2]+maxlen[3])*5-30, endY = getY()+(itemstx.length*5)+5;
         createBoxAndTitle(startX, startY, endX, endY, transpColor);
@@ -115,8 +141,7 @@ public class OverlayMod extends HudMod {
         return ctitem;
     }
 
-    public void initItemCounts()
-    {
+    public void initItemCounts() {
         int[] proxyMaxlen = new int[4];
         maxlen = proxyMaxlen;
 

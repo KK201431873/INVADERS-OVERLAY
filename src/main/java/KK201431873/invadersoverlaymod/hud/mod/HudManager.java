@@ -14,8 +14,7 @@ public class HudManager {
 
     public static ArrayList<HudMod> hudMods = new ArrayList<HudMod>();
 
-    public HudManager()
-    {
+    public HudManager() {
         curTask = 0;
         hudMods.add(new OverlayMod("New Task", 75, 125));
     }

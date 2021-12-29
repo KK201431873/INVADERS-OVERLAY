@@ -7,7 +7,7 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["KK201431873"],
+  "authorList": ["KK201431873", "portalthree"],
   "credits": "The Forge and FML guys, for making this forge and fml",
   "logoFile": "ironblock.png",
   "screenshots": [],

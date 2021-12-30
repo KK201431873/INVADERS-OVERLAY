@@ -10,14 +10,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Checker {
-    String mostUpToDateVersion;
     public void checkUpdate(){
         try {
             System.out.println("Starting update checker process.");
-            /*
-            Checks https://raw.githubusercontent.com/KK201431873/INVADERS-OVERLAY/main/src/main/resources/version.txt
-            to see if it is the same string as InvadersOverlayMod.VERSION
-             */
+            /* Checks https://raw.githubusercontent.com/KK201431873/INVADERS-OVERLAY/main/src/main/resources/version.txt
+            to see if it is the same string as InvadersOverlayMod.VERSION */
             URL url = new URL("https://raw.githubusercontent.com/KK201431873/INVADERS-OVERLAY/main/src/main/resources/version.txt");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
@@ -29,7 +26,7 @@ public class Checker {
             while ((inputLine = in.readLine()) != null) {
                 content.append(inputLine);
             }
-            mostUpToDateVersion = content.toString();
+            String mostUpToDateVersion = content.toString();
             System.out.println("MOST UP TO DATE VERSION:" + mostUpToDateVersion);
 
             if(!InvadersOverlayMod.VERSION.equals(mostUpToDateVersion)){
@@ -38,8 +35,7 @@ public class Checker {
                 System.out.println("Sending message to the player when they join a world.");
 
                 /* Registers SendMessageOnWorldJoin
-                ONLY if the mostUpToDateVersion is not the same as InvadersOverMod.VERSION
-                 */
+                ONLY if the mostUpToDateVersion is not the same as InvadersOverMod.VERSION */
                 MinecraftForge.EVENT_BUS.register(new SendMessageOnWorldJoin(mostUpToDateVersion));
 
             } else {

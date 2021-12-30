@@ -2,7 +2,7 @@
 {
   "modid": "invadersoverlaymod",
   "name": "Invaders Overlay Mod",
-  "description": "A mod for Hypixel Invaders.",
+  "description": "A mod for Hypixel Invaders.\nThe default key to open the GUI is RSHIFT. You can change that in the client keybind menu.\nUse /iom help to display the help menu.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",

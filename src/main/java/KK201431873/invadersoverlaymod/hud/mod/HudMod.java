@@ -15,7 +15,7 @@ public class HudMod extends Gui {
     public DraggableComponent drag;
 
     public int x, y;
-    public int[] resourceGoals = {36, 84, 52, 36, 30, 16, 24, 40, 32, 11, 0, 0};
+    public int[] resourceGoals = new int[12];
 
     public HudMod(String name, int x, int y)
     {

@@ -5,6 +5,7 @@ import KK201431873.invadersoverlaymod.commands.IomTaskCommands;
 import KK201431873.invadersoverlaymod.commands.IomTaskConfigCommands;
 import KK201431873.invadersoverlaymod.hud.mod.HudManager;
 import KK201431873.invadersoverlaymod.updater.Checker;
+import KK201431873.invadersoverlaymod.updater.SendMessageOnWorldJoin;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -38,6 +39,7 @@ public class InvadersOverlayMod {
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+        MinecraftForge.EVENT_BUS.register(new IOMEventHandler());
         MinecraftForge.EVENT_BUS.register(new IOMEventHandler());
         hudManager = new HudManager();
         Checker updater = new Checker();

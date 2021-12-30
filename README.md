@@ -12,8 +12,11 @@ Created by KK201431873 & portalthree
 
 ### SECTION I: GUI and Keybinds
 The initial GUI shows a HUD with twelve item counters, all contained within a box (This is called a "task").
+
 Each icon and its number displays the count of that resource present inside the player's inventory. The count also has a resource goal, displayed to the right of the inventory item count (Given "10/86", 10 would be the inventory item count and 86 would be the resource goal).
+
 The resource counter text will appear to be red if the resource goal is not met (inventory count < resource goal) and will appear to be green when it is met (inventory count >= resource goal).
+
 The task's HUD can be repositioned on the screen by opening the configuration screen; it is opened by pressing its keybind (defaultly RSHIFT) and the keybind can be changed by opening the Game Settings (Escape -> Options -> Controls -> "Invaders Overlay Mod" -> "Open HUD Configuration")
 
 ### SECTION II: Commands
@@ -24,18 +27,18 @@ Tasks can be configured by using the IOM commands. Execute "/iom help" in the ga
  - Changes the resource goal of each item to their respective positions in the command.
 
 The setall order is as follows:
-1 - shiny_bar
-2 - super_ultra_sticky_glue
-3 - support_rod
-4 - space_sand
-5 - sharpened_stone
-6 - synthetic_thread
-7 - slime_poop
-8 - unidentified_material
-9 - bonding_agent
-10 - super_shiny_rock
-11 - silicon
-12 - gyroscope
+- 1. shiny_bar
+- 2. super_ultra_sticky_glue
+- 3. support_rod
+- 4. space_sand
+- 5. sharpened_stone
+- 6. synthetic_thread
+- 7. slime_poop
+- 8. unidentified_material
+- 9. bonding_agent
+- 10. super_shiny_rock
+- 11. silicon
+- 12. gyroscope
 
 Tasks can be created, edited, and viewed by using the Task commands. Execute "/task help" in the game for a detailed list.
 NOTE: The "/task" prefix of the command can be shortened and replaced with "/t".
@@ -57,9 +60,9 @@ Task switching (Changing to a different saved task configuration)
 **Indexes of tasks begin at index 1
 
 Shorthand Substitutions
-- delete:del
-- deleteind:delind
-- setname:sn
-- cycle:c
-- forward:f
-- backward:b
+- delete: del
+- deleteind: delind
+- setname: sn
+- cycle: c
+- forward: f
+- backward: b

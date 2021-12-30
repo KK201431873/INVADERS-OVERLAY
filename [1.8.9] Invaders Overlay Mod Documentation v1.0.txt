@@ -34,6 +34,8 @@ The order is as follows:
 11.silicon
 12.gyroscope
 
+The default amounts are enough to do all repairs, max pickaxe and upgrade jetpack once!
+
 Tasks can be created, edited, and viewed by using the Task commands. Execute "/task help" in the game for a detailed list.
 						      ^^^^ ^^^^^^^^	      ^^^^^ ^^^^
 NOTE: The "/task" prefix of the command can be shortened and replaced with "/t".

@@ -6,7 +6,7 @@ Minecraft Version: Forge 1.8.9
 
 Invaders Overlay Mod (IOM) is an overlay mod for Hypixel Invaders (mc.hypixel.net).
 
-Created by KK201431873 & portalthree
+Created by KK201431873, Nopox-Minecraft, and portalthree
 
 ## DOCUMENTATION
 

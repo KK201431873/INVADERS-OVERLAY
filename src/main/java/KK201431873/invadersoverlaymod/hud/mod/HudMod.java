@@ -17,8 +17,7 @@ public class HudMod extends Gui {
     public int x, y;
     public int[] resourceGoals = {36, 84, 52, 36, 30, 16, 24, 40, 32, 11, 0, 0};
 
-    public HudMod(String name, int x, int y)
-    {
+    public HudMod(String name, int x, int y) {
         this.x = x;
         this.y = y;
         this.name = name;
@@ -26,33 +25,27 @@ public class HudMod extends Gui {
         drag = new DraggableComponent(x, y, getWidth(), getHeight(), 0x96000000);
     }
 
-    public int getWidth()
-    {
+    public int getWidth() {
         return 50;
     }
 
-    public int getHeight()
-    {
+    public int getHeight() {
         return 50;
     }
 
-    public void draw()
-    {
+    public void draw() {
 
     }
 
-    public void renderDummy(int mouseX, int mouseY)
-    {
+    public void renderDummy(int mouseX, int mouseY) {
         drag.draw(mouseX, mouseY);
     }
 
-    public int getX()
-    {
+    public int getX() {
         return drag.getxPosition();
     }
 
-    public int getY()
-    {
+    public int getY() {
         return drag.getyPosition();
     }
 }
